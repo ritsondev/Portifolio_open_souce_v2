@@ -95,6 +95,7 @@ body{
     height: 200px;
     border-radius: 50%;
     border: 4px solid var(--dif);
+    animation: flutuation 5s ease-in-out infinite;
     box-shadow: 0 0 20px rgba(79, 70, 299, 0.3);
 
 }
@@ -222,7 +223,110 @@ padding: 6rem 2rem;
 
 }
 
+.contact{
 
+padding: 6rem 2rem;
+
+}
+
+.contact-tittle{
+
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+
+}
+
+.form-contact{
+
+    max-width: 600px;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--dif);
+    background-color: rgba(255,255,255,0.05);
+   
+
+}
+
+
+
+.camp-form{
+
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    color: var(--dif);
+    border-radius: 8px;
+    border: 1px solid var(--dif);
+    background-color: rgba(255,255,255,0.05);
+
+}
+
+.camp-form:focus{
+
+    border-color: var(--secound);
+    box-shadow: 0 0 10px rgba(79, 70, 299, 0.3);
+
+}
+.element-form{
+
+    margin-bottom: 1.5rem;
+
+}
+
+.button-send{
+
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    color: var(--normal);
+    transition: all 0.5s ease;
+    background: linear-gradient(45deg,var(--first),var(--secound));
+    
+}
+
+.button-send:hover{
+
+    transform: translateY(-4px);
+    box-shadow: 0px 5px 15px rgba(79, 70, 299, 0.4);
+
+}
+
+.effect-color{
+
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 50% 20%, var(--first) 0%, transparent 20%),
+    radial-gradient(circle at 0% 80%, var(--first) 0%, transparent 20%)
+
+}
+
+
+@keyframes flutuation{
+
+    0%,100%{
+
+        transform: translateY(0);
+
+    }
+
+    50%{
+
+        transform: translateY(-20px);
+
+    }
+
+}
 
 
 
