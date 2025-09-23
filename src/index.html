@@ -95,18 +95,18 @@
     <section id="contact" class="contact">
         <h2 class="contact-tittle">Entre Contact</h2>
 
-        <form action="" class="form-contact" id="form">
+        <form action="" class="form-contact" id="form" onsubmit="sendWhatsApp(event)">
 
             <div class="element-form">
 
-            <input type="text" placeholder="Name" class="camp-form">
+            <input type="text" placeholder="Name" class="camp-form" id="name">
              
 
             </div>
 
             <div class="element-form">
 
-                <textarea class="camp-form" placeholder="Send Your Message"></textarea>
+                <textarea class="camp-form" placeholder="Send Your Message" id="msg" rows="6"></textarea>
 
             </div>
 
@@ -115,6 +115,30 @@
         </form>
         
     </section>
+
+    <script>
+
+        function sendWhatsApp(event){
+
+    event.preventDefault();
+const nome = document.getElementById("name").value;
+const message = document.getElementById("msg").value;
+const phone = "976418992";
+
+const text = `olá mmeu nome é ${nome}, ${message} `;
+
+const msgnospace = encodeURIComponent(text);
+
+const link = `https://wa.me/${phone}?text=${msgnospace}`;
+
+
+
+
+    window.open(link,);
+
+}
+
+    </script>
     
 </body>
 </html>
